@@ -1,0 +1,565 @@
+VERSION = 1,
+
+option Bandits_AddOptions.AllowRaiders = {
+    type = boolean, default = false,
+    page = Bandits_AddOptions, translation = Bandits_AddOptions.AllowRaiders,
+}
+option Bandits_AddOptions.MeleeBalance = {
+    type = enum, numValues=2, default = 2,
+    page = Bandits_AddOptions, translation = Bandits_AddOptions.MeleeBalance, _tooltip=Bandits_AddOptions.MeleeBalance, valueTranslation=Bandits_AddOptions.MeleeBalance,
+}
+option Bandits_AddOptions.SpawnMultiplier = {
+    type = integer, min = 10, max = 1000, default = 100,
+    page = Bandits_AddOptions, translation = Bandits_AddOptions.SpawnMultiplier, _tooltip=Bandits_AddOptions.SpawnMultiplier_Tooltip,
+}
+option Bandits_AddOptions.ZoneBoost = {
+    type = integer, min = 5, max = 100, default = 60,
+    page = Bandits_AddOptions, translation = Bandits_AddOptions.ZoneBoost, _tooltip=Bandits_AddOptions.ZoneBoost_Tooltip,
+}
+option Bandits_AddOptions.TimePersists = {
+    type = boolean, default = false,
+    page = Bandits_AddOptions, translation = Bandits_AddOptions.TimePersists,
+}
+option Bandits_AddOptions.RandomGroupSize = {
+    type = boolean, default = true,
+    page = Bandits_AddOptions, translation = Bandits_AddOptions.RandomGroupSize,
+}
+option Bandits_AddOptions.RandomHealth = {
+    type = boolean, default = true,
+    page = Bandits_AddOptions, translation = Bandits_AddOptions.RandomHealth,
+}
+option Bandits_AddOptions.RandomAmmo = {
+    type = boolean, default = true,
+    page = Bandits_AddOptions, translation = Bandits_AddOptions.RandomAmmo,
+}
+option Bandits_AddOptions.RandomLoot = {
+    type = integer, min = 0, max = 100, default = 50,
+    page = Bandits_AddOptions, translation = Bandits_AddOptions.RandomLoot, _tooltip=Bandits_AddOptions.RandomLoot_Tooltip,
+}
+option Bandits_AddOptions.BaseSpawnRadius = {
+    type = integer, min = 0, max = 100, default = 20,
+    page = Bandits_AddOptions, translation = Bandits_AddOptions.BaseSpawnRadius, _tooltip=Bandits_AddOptions.BaseSpawnRadius_Tooltip,
+}
+option Bandits_AddOptions.DefenderCooldown = {
+    type = integer, min = 1, max = 365, default = 14,
+    page = Bandits_AddOptions, translation = Bandits_AddOptions.DefenderCooldown, _tooltip=Bandits_AddOptions.DefenderCooldown_Tooltip,
+}
+option Bandits_AddOptions.GeneratorSettings = {
+    type = enum, numValues=5, default = 2,
+    page = Bandits_AddOptions, translation = Bandits_AddOptions.GeneratorSettings, _tooltip=Bandits_AddOptions.GeneratorSettingsTooltip, valueTranslation=Bandits_AddOptions.GeneratorSettings,
+}
+option Bandits_AddOptions.AllowRoadblockSandbags = {
+    type = boolean, default = true,
+    page = Bandits_AddOptions, translation = Bandits_AddOptions.AllowRoadblockSandbags,
+}
+option Bandits_AddOptions.VehicleInsertionFX = {
+    type = boolean, default = true,
+    page = Bandits_AddOptions, translation = Bandits_AddOptions.VehicleInsertionFX,
+}
+option Bandits_AddOptions.AllowGore = {
+    type = boolean, default = true,
+    page = Bandits_AddOptions, translation = Bandits_AddOptions.AllowGore,
+}
+option Bandits_AddOptions.Incognito = {
+    type = boolean, default = false,
+    page = Bandits_AddOptions, translation = Bandits_AddOptions.Incognito,
+}
+
+/***** citizens *****/
+
+option Bandits.Clan_1_RandomAmmo = {
+    type = integer, min = 0, max = 25, default = 0,
+    page = Bandits_Clan_1, translation = Bandits.RandomAmmo, _tooltip=Bandits.RandomAmmo_Tooltip,
+}
+option Bandits.Clan_1_RandomHealthMin = {
+    type = double, min = 1, max = 4, default = 1,
+    page = Bandits_Clan_1, translation = Bandits.RandomHealthMin, _tooltip=Bandits.RandomHealthMin_Tooltip,
+}
+option Bandits.Clan_1_RandomHealthMax = {
+    type = double, min = 1, max = 4, default = 1.2,
+    page = Bandits_Clan_1, translation = Bandits.RandomHealthMax, _tooltip=Bandits.RandomHealthMax_Tooltip,
+}
+option Bandits.Clan_1_GroupSizeMin = {
+    type = integer, min = 1, max = 25, default = 1,
+    page = Bandits_Clan_1, translation = Bandits.GroupSizeMin, _tooltip=Bandits.GroupSizeMin_Tooltip,
+}
+option Bandits.Clan_1_GroupSizeMax = {
+    type = integer, min = 1, max = 25, default = 3,
+    page = Bandits_Clan_1, translation = Bandits.GroupSizeMax, _tooltip=Bandits.GroupSizeMaxTooltip,
+}
+option Bandits.Clan_1_Loadout = {
+    type = enum, numValues=6, default = 2,
+    page = Bandits_Clan_1, translation = Bandits.Loadout, _tooltip=Bandits.LoadoutTooltip, valueTranslation=Bandits.Loadout,
+}
+option Bandits.Clan_1_SpecialWeapons = {
+    type = enum, numValues=6, default = 6,
+    page = Bandits_Clan_1, translation = Bandits.SpecialWeapons, _tooltip=Bandits.SpecialWeaponsTooltip, valueTranslation=Bandits.SpecialWeapons,
+}
+
+/***** psychopaths *****/
+
+option Bandits.Clan_2_RandomAmmo = {
+    type = integer, min = 0, max = 25, default = 0,
+    page = Bandits_Clan_2, translation = Bandits.RandomAmmo, _tooltip=Bandits.RandomAmmo_Tooltip,
+}
+option Bandits.Clan_2_RandomHealthMin = {
+    type = double, min = 1, max = 4, default = 1,
+    page = Bandits_Clan_2, translation = Bandits.RandomHealthMin, _tooltip=Bandits.RandomHealthMin_Tooltip,
+}
+option Bandits.Clan_2_RandomHealthMax = {
+    type = double, min = 1, max = 4, default = 1.4,
+    page = Bandits_Clan_2, translation = Bandits.RandomHealthMax, _tooltip=Bandits.RandomHealthMax_Tooltip,
+}
+option Bandits.Clan_2_GroupSizeMin = {
+    type = integer, min = 1, max = 25, default = 1,
+    page = Bandits_Clan_2, translation = Bandits.GroupSizeMin, _tooltip=Bandits.GroupSizeMinTooltip,
+}
+option Bandits.Clan_2_GroupSizeMax = {
+    type = integer, min = 1, max = 25, default = 3,
+    page = Bandits_Clan_2, translation = Bandits.GroupSizeMax, _tooltip=Bandits.GroupSizeMaxTooltip,
+}
+option Bandits.Clan_2_Loadout = {
+    type = enum, numValues=6, default = 6,
+    page = Bandits_Clan_2, translation = Bandits.Loadout, _tooltip=Bandits.LoadoutTooltip, valueTranslation=Bandits.Loadout,
+}
+option Bandits.Clan_2_SpecialWeapons = {
+    type = enum, numValues=6, default = 5,
+    page = Bandits_Clan_2, translation = Bandits.SpecialWeapons, _tooltip=Bandits.SpecialWeaponsTooltip, valueTranslation=Bandits.SpecialWeapons,
+}
+
+/***** cannibals *****/
+
+option Bandits.Clan_3_RandomAmmo = {
+    type = integer, min = 0, max = 25, default = 0,
+    page = Bandits_Clan_3, translation = Bandits.RandomAmmo, _tooltip=Bandits.RandomAmmo_Tooltip,
+}
+option Bandits.Clan_3_RandomHealthMin = {
+    type = double, min = 1, max = 4, default = 1,
+    page = Bandits_Clan_3, translation = Bandits.RandomHealthMin, _tooltip=Bandits.RandomHealthMin_Tooltip,
+}
+option Bandits.Clan_3_RandomHealthMax = {
+    type = double, min = 1, max = 4, default = 1.3,
+    page = Bandits_Clan_3, translation = Bandits.RandomHealthMax, _tooltip=Bandits.RandomHealthMax_Tooltip,
+}
+option Bandits.Clan_3_GroupSizeMin = {
+    type = integer, min = 1, max = 25, default = 2,
+    page = Bandits_Clan_3, translation = Bandits.GroupSizeMin, _tooltip=Bandits.GroupSizeMinTooltip,
+}
+option Bandits.Clan_3_GroupSizeMax = {
+    type = integer, min = 1, max = 25, default = 4,
+    page = Bandits_Clan_3, translation = Bandits.GroupSizeMax, _tooltip=Bandits.GroupSizeMaxTooltip,
+}
+option Bandits.Clan_3_Loadout = {
+    type = enum, numValues=6, default = 2,
+    page = Bandits_Clan_3, translation = Bandits.Loadout, _tooltip=Bandits.LoadoutTooltip, valueTranslation=Bandits.Loadout,
+}
+option Bandits.Clan_3_SpecialWeapons = {
+    type = enum, numValues=6, default = 6,
+    page = Bandits_Clan_3, translation = Bandits.SpecialWeapons, _tooltip=Bandits.SpecialWeaponsTooltip, valueTranslation=Bandits.SpecialWeapons,
+}
+
+/***** criminals *****/
+
+option Bandits.Clan_4_RandomAmmo = {
+    type = integer, min = 0, max = 25, default = 0,
+    page = Bandits_Clan_4, translation = Bandits.RandomAmmo, _tooltip=Bandits.RandomAmmo_Tooltip,
+}
+option Bandits.Clan_4_RandomHealthMin = {
+    type = double, min = 1, max = 4, default = 1.1,
+    page = Bandits_Clan_4, translation = Bandits.RandomHealthMin, _tooltip=Bandits.RandomHealthMin_Tooltip,
+}
+option Bandits.Clan_4_RandomHealthMax = {
+    type = double, min = 1, max = 4, default = 1.5,
+    page = Bandits_Clan_4, translation = Bandits.RandomHealthMax, _tooltip=Bandits.RandomHealthMax_Tooltip,
+}
+option Bandits.Clan_4_GroupSizeMin = {
+    type = integer, min = 1, max = 25, default = 1,
+    page = Bandits_Clan_4, translation = Bandits.GroupSizeMin, _tooltip=Bandits.GroupSizeMinTooltip,
+}
+option Bandits.Clan_4_GroupSizeMax = {
+    type = integer, min = 1, max = 25, default = 5,
+    page = Bandits_Clan_4, translation = Bandits.GroupSizeMax, _tooltip=Bandits.GroupSizeMaxTooltip,
+}
+option Bandits.Clan_4_Loadout = {
+    type = enum, numValues=6, default = 6,
+    page = Bandits_Clan_4, translation = Bandits.Loadout, _tooltip=Bandits.LoadoutTooltip, valueTranslation=Bandits.Loadout,
+}
+option Bandits.Clan_4_SpecialWeapons = {
+    type = enum, numValues=6, default = 4,
+    page = Bandits_Clan_4, translation = Bandits.SpecialWeapons, _tooltip=Bandits.SpecialWeaponsTooltip, valueTranslation=Bandits.SpecialWeapons,
+}
+
+/***** inmates *****/
+
+option Bandits.Clan_5_RandomAmmo = {
+    type = integer, min = 0, max = 25, default = 0,
+    page = Bandits_Clan_5, translation = Bandits.RandomAmmo, _tooltip=Bandits.RandomAmmo_Tooltip,
+}
+option Bandits.Clan_5_RandomHealthMin = {
+    type = double, min = 1, max = 4, default = 1.2,
+    page = Bandits_Clan_5, translation = Bandits.RandomHealthMin, _tooltip=Bandits.RandomHealthMin_Tooltip,
+}
+option Bandits.Clan_5_RandomHealthMax = {
+    type = double, min = 1, max = 4, default = 1.5,
+    page = Bandits_Clan_5, translation = Bandits.RandomHealthMax, _tooltip=Bandits.RandomHealthMax_Tooltip,
+}
+option Bandits.Clan_5_GroupSizeMin = {
+    type = integer, min = 1, max = 25, default = 1,
+    page = Bandits_Clan_5, translation = Bandits.GroupSizeMin, _tooltip=Bandits.GroupSizeMinTooltip,
+}
+option Bandits.Clan_5_GroupSizeMax = {
+    type = integer, min = 1, max = 25, default = 6,
+    page = Bandits_Clan_5, translation = Bandits.GroupSizeMax, _tooltip=Bandits.GroupSizeMaxTooltip,
+}
+option Bandits.Clan_5_Loadout = {
+    type = enum, numValues=6, default = 3,
+    page = Bandits_Clan_5, translation = Bandits.Loadout, _tooltip=Bandits.LoadoutTooltip, valueTranslation=Bandits.Loadout,
+}
+option Bandits.Clan_5_SpecialWeapons = {
+    type = enum, numValues=6, default = 5,
+    page = Bandits_Clan_5, translation = Bandits.SpecialWeapons, _tooltip=Bandits.SpecialWeaponsTooltip, valueTranslation=Bandits.SpecialWeapons,
+}
+
+/***** police *****/
+
+option Bandits.Clan_6_RandomAmmo = {
+    type = integer, min = 0, max = 25, default = 1,
+    page = Bandits_Clan_6, translation = Bandits.RandomAmmo, _tooltip=Bandits.RandomAmmo_Tooltip,
+}
+option Bandits.Clan_6_RandomHealthMin = {
+    type = double, min = 1, max = 4, default = 1.2,
+    page = Bandits_Clan_6, translation = Bandits.RandomHealthMin, _tooltip=Bandits.RandomHealthMin_Tooltip,
+}
+option Bandits.Clan_6_RandomHealthMax = {
+    type = double, min = 1, max = 4, default = 1.8,
+    page = Bandits_Clan_6, translation = Bandits.RandomHealthMax, _tooltip=Bandits.RandomHealthMax_Tooltip,
+}
+option Bandits.Clan_6_GroupSizeMin = {
+    type = integer, min = 1, max = 25, default = 1,
+    page = Bandits_Clan_6, translation = Bandits.GroupSizeMin, _tooltip=Bandits.GroupSizeMinTooltip,
+}
+option Bandits.Clan_6_GroupSizeMax = {
+    type = integer, min = 1, max = 25, default = 5,
+    page = Bandits_Clan_6, translation = Bandits.GroupSizeMax, _tooltip=Bandits.GroupSizeMaxTooltip,
+}
+option Bandits.Clan_6_Loadout = {
+    type = enum, numValues=6, default = 3,
+    page = Bandits_Clan_6, translation = Bandits.Loadout, _tooltip=Bandits.LoadoutTooltip, valueTranslation=Bandits.Loadout,
+}
+option Bandits.Clan_6_SpecialWeapons = {
+    type = enum, numValues=6, default = 4,
+    page = Bandits_Clan_6, translation = Bandits.SpecialWeapons, _tooltip=Bandits.SpecialWeaponsTooltip, valueTranslation=Bandits.SpecialWeapons,
+}
+
+
+/***** preppers *****/
+
+option Bandits.Clan_7_RandomAmmo = {
+    type = integer, min = 0, max = 25, default = 1,
+    page = Bandits_Clan_7, translation = Bandits.RandomAmmo, _tooltip=Bandits.RandomAmmo_Tooltip,
+}
+option Bandits.Clan_7_RandomHealthMin = {
+    type = double, min = 1, max = 4, default = 1.2,
+    page = Bandits_Clan_7, translation = Bandits.RandomHealthMin, _tooltip=Bandits.RandomHealthMin_Tooltip,
+}
+option Bandits.Clan_7_RandomHealthMax = {
+    type = double, min = 1, max = 4, default = 1.7,
+    page = Bandits_Clan_7, translation = Bandits.RandomHealthMax, _tooltip=Bandits.RandomHealthMax_Tooltip,
+}
+option Bandits.Clan_7_GroupSizeMin = {
+    type = integer, min = 1, max = 25, default = 1,
+    page = Bandits_Clan_7, translation = Bandits.GroupSizeMin, _tooltip=Bandits.GroupSizeMinTooltip,
+}
+option Bandits.Clan_7_GroupSizeMax = {
+    type = integer, min = 1, max = 25, default = 2,
+    page = Bandits_Clan_7, translation = Bandits.GroupSizeMax, _tooltip=Bandits.GroupSizeMaxTooltip,
+}
+option Bandits.Clan_7_Loadout = {
+    type = enum, numValues=6, default = 5,
+    page = Bandits_Clan_7, translation = Bandits.Loadout, _tooltip=Bandits.LoadoutTooltip, valueTranslation=Bandits.Loadout,
+}
+option Bandits.Clan_7_SpecialWeapons = {
+    type = enum, numValues=6, default = 4,
+    page = Bandits_Clan_7, translation = Bandits.SpecialWeapons, _tooltip=Bandits.SpecialWeaponsTooltip, valueTranslation=Bandits.SpecialWeapons,
+}
+
+
+/***** veterans *****/
+
+option Bandits.Clan_8_RandomAmmo = {
+    type = integer, min = 0, max = 25, default = 2,
+    page = Bandits_Clan_8, translation = Bandits.RandomAmmo, _tooltip=Bandits.RandomAmmo_Tooltip,
+}
+option Bandits.Clan_8_RandomHealthMin = {
+    type = double, min = 1, max = 4, default = 1.7,
+    page = Bandits_Clan_8, translation = Bandits.RandomHealthMin, _tooltip=Bandits.RandomHealthMin_Tooltip,
+}
+option Bandits.Clan_8_RandomHealthMax = {
+    type = double, min = 1, max = 4, default = 2.5,
+    page = Bandits_Clan_8, translation = Bandits.RandomHealthMax, _tooltip=Bandits.RandomHealthMax_Tooltip,
+}
+option Bandits.Clan_8_GroupSizeMin = {
+    type = integer, min = 1, max = 25, default = 1,
+    page = Bandits_Clan_8, translation = Bandits.GroupSizeMin, _tooltip=Bandits.GroupSizeMinTooltip,
+}
+option Bandits.Clan_8_GroupSizeMax = {
+    type = integer, min = 1, max = 25, default = 2,
+    page = Bandits_Clan_8, translation = Bandits.GroupSizeMax, _tooltip=Bandits.GroupSizeMaxTooltip,
+}
+option Bandits.Clan_8_Loadout = {
+    type = enum, numValues=6, default = 5,
+    page = Bandits_Clan_8, translation = Bandits.Loadout, _tooltip=Bandits.LoadoutTooltip, valueTranslation=Bandits.Loadout,
+}
+option Bandits.Clan_8_SpecialWeapons = {
+    type = enum, numValues=6, default = 3,
+    page = Bandits_Clan_8, translation = Bandits.SpecialWeapons, _tooltip=Bandits.SpecialWeaponsTooltip, valueTranslation=Bandits.SpecialWeapons,
+}
+
+/***** bikers *****/
+
+option Bandits.Clan_9_RandomAmmo = {
+    type = integer, min = 0, max = 25, default = 0,
+    page = Bandits_Clan_9, translation = Bandits.RandomAmmo, _tooltip=Bandits.RandomAmmo_Tooltip,
+}
+option Bandits.Clan_9_RandomHealthMin = {
+    type = double, min = 1, max = 4, default = 1.2,
+    page = Bandits_Clan_9, translation = Bandits.RandomHealthMin, _tooltip=Bandits.RandomHealthMin_Tooltip,
+}
+option Bandits.Clan_9_RandomHealthMax = {
+    type = double, min = 1, max = 4, default = 1.6,
+    page = Bandits_Clan_9, translation = Bandits.RandomHealthMax, _tooltip=Bandits.RandomHealthMax_Tooltip,
+}
+option Bandits.Clan_9_GroupSizeMin = {
+    type = integer, min = 1, max = 25, default = 3,
+    page = Bandits_Clan_9, translation = Bandits.GroupSizeMin, _tooltip=Bandits.GroupSizeMinTooltip,
+}
+option Bandits.Clan_9_GroupSizeMax = {
+    type = integer, min = 1, max = 25, default = 7,
+    page = Bandits_Clan_9, translation = Bandits.GroupSizeMax, _tooltip=Bandits.GroupSizeMaxTooltip,
+}
+option Bandits.Clan_9_Loadout = {
+    type = enum, numValues=6, default = 6,
+    page = Bandits_Clan_9, translation = Bandits.Loadout, _tooltip=Bandits.LoadoutTooltip, valueTranslation=Bandits.Loadout,
+}
+option Bandits.Clan_9_SpecialWeapons = {
+    type = enum, numValues=6, default = 4,
+    page = Bandits_Clan_9, translation = Bandits.SpecialWeapons, _tooltip=Bandits.SpecialWeaponsTooltip, valueTranslation=Bandits.SpecialWeapons,
+}
+
+/***** hunters *****/
+
+option Bandits.Clan_10_RandomAmmo = {
+    type = integer, min = 0, max = 25, default = 1,
+    page = Bandits_Clan_10, translation = Bandits.RandomAmmo, _tooltip=Bandits.RandomAmmo_Tooltip,
+}
+option Bandits.Clan_10_RandomHealthMin = {
+    type = double, min = 1, max = 4, default = 1.1,
+    page = Bandits_Clan_10, translation = Bandits.RandomHealthMin, _tooltip=Bandits.RandomHealthMin_Tooltip,
+}
+option Bandits.Clan_10_RandomHealthMax = {
+    type = double, min = 1, max = 4, default = 1.6,
+    page = Bandits_Clan_10, translation = Bandits.RandomHealthMax, _tooltip=Bandits.RandomHealthMax_Tooltip,
+}
+option Bandits.Clan_10_GroupSizeMin = {
+    type = integer, min = 1, max = 25, default = 1,
+    page = Bandits_Clan_10, translation = Bandits.GroupSizeMin, _tooltip=Bandits.GroupSizeMinTooltip,
+}
+option Bandits.Clan_10_GroupSizeMax = {
+    type = integer, min = 1, max = 25, default = 2,
+    page = Bandits_Clan_10, translation = Bandits.GroupSizeMax, _tooltip=Bandits.GroupSizeMaxTooltip,
+}
+option Bandits.Clan_10_Loadout = {
+    type = enum, numValues=6, default = 2,
+    page = Bandits_Clan_10, translation = Bandits.Loadout, _tooltip=Bandits.LoadoutTooltip, valueTranslation=Bandits.Loadout,
+}
+option Bandits.Clan_10_SpecialWeapons = {
+    type = enum, numValues=6, default = 6,
+    page = Bandits_Clan_10, translation = Bandits.SpecialWeapons, _tooltip=Bandits.SpecialWeaponsTooltip, valueTranslation=Bandits.SpecialWeapons,
+}
+
+
+/***** reclaimers *****/
+
+option Bandits.Clan_11_RandomAmmo = {
+    type = integer, min = 0, max = 25, default = 0,
+    page = Bandits_Clan_11, translation = Bandits.RandomAmmo, _tooltip=Bandits.RandomAmmo_Tooltip,
+}
+option Bandits.Clan_11_RandomHealthMin = {
+    type = double, min = 1, max = 4, default = 1.7,
+    page = Bandits_Clan_11, translation = Bandits.RandomHealthMin, _tooltip=Bandits.RandomHealthMin_Tooltip,
+}
+option Bandits.Clan_11_RandomHealthMax = {
+    type = double, min = 1, max = 4, default = 3.5,
+    page = Bandits_Clan_11, translation = Bandits.RandomHealthMax, _tooltip=Bandits.RandomHealthMax_Tooltip,
+}
+option Bandits.Clan_11_GroupSizeMin = {
+    type = integer, min = 1, max = 25, default = 2,
+    page = Bandits_Clan_11, translation = Bandits.GroupSizeMin, _tooltip=Bandits.GroupSizeMinTooltip,
+}
+option Bandits.Clan_11_GroupSizeMax = {
+    type = integer, min = 1, max = 25, default = 15,
+    page = Bandits_Clan_11, translation = Bandits.GroupSizeMax, _tooltip=Bandits.GroupSizeMaxTooltip,
+}
+option Bandits.Clan_11_Loadout = {
+    type = enum, numValues=6, default = 2,
+    page = Bandits_Clan_11, translation = Bandits.Loadout, _tooltip=Bandits.LoadoutTooltip, valueTranslation=Bandits.Loadout,
+}
+option Bandits.Clan_11_SpecialWeapons = {
+    type = enum, numValues=6, default = 6,
+    page = Bandits_Clan_11, translation = Bandits.SpecialWeapons, _tooltip=Bandits.SpecialWeaponsTooltip, valueTranslation=Bandits.SpecialWeapons,
+}
+
+/***** scientists *****/
+
+option Bandits.Clan_12_RandomAmmo = {
+    type = integer, min = 0, max = 25, default = 1,
+    page = Bandits_Clan_12, translation = Bandits.RandomAmmo, _tooltip=Bandits.RandomAmmo_Tooltip,
+}
+option Bandits.Clan_12_RandomHealthMin = {
+    type = double, min = 1, max = 4, default = 1.5,
+    page = Bandits_Clan_12, translation = Bandits.RandomHealthMin, _tooltip=Bandits.RandomHealthMin_Tooltip,
+}
+option Bandits.Clan_12_RandomHealthMax = {
+    type = double, min = 1, max = 4, default = 2.1,
+    page = Bandits_Clan_12, translation = Bandits.RandomHealthMax, _tooltip=Bandits.RandomHealthMax_Tooltip,
+}
+option Bandits.Clan_12_GroupSizeMin = {
+    type = integer, min = 1, max = 25, default = 3,
+    page = Bandits_Clan_12, translation = Bandits.GroupSizeMin, _tooltip=Bandits.GroupSizeMinTooltip,
+}
+option Bandits.Clan_12_GroupSizeMax = {
+    type = integer, min = 1, max = 25, default = 7,
+    page = Bandits_Clan_12, translation = Bandits.GroupSizeMax, _tooltip=Bandits.GroupSizeMaxTooltip,
+}
+option Bandits.Clan_12_Loadout = {
+    type = enum, numValues=6, default = 3,
+    page = Bandits_Clan_12, translation = Bandits.Loadout, _tooltip=Bandits.LoadoutTooltip, valueTranslation=Bandits.Loadout,
+}
+option Bandits.Clan_12_SpecialWeapons = {
+    type = enum, numValues=6, default = 4,
+    page = Bandits_Clan_12, translation = Bandits.SpecialWeapons, _tooltip=Bandits.SpecialWeaponsTooltip, valueTranslation=Bandits.SpecialWeapons,
+}
+
+/***** doomriders *****/
+
+option Bandits.Clan_13_RandomAmmo = {
+    type = integer, min = 0, max = 25, default = 0,
+    page = Bandits_Clan_13, translation = Bandits.RandomAmmo, _tooltip=Bandits.RandomAmmo_Tooltip,
+}
+option Bandits.Clan_13_RandomHealthMin = {
+    type = double, min = 1, max = 4, default = 1.2,
+    page = Bandits_Clan_13, translation = Bandits.RandomHealthMin, _tooltip=Bandits.RandomHealthMin_Tooltip,
+}
+option Bandits.Clan_13_RandomHealthMax = {
+    type = double, min = 1, max = 4, default = 2.5,
+    page = Bandits_Clan_13, translation = Bandits.RandomHealthMax, _tooltip=Bandits.RandomHealthMax_Tooltip,
+}
+option Bandits.Clan_13_GroupSizeMin = {
+    type = integer, min = 1, max = 25, default = 2,
+    page = Bandits_Clan_13, translation = Bandits.GroupSizeMin, _tooltip=Bandits.GroupSizeMinTooltip,
+}
+option Bandits.Clan_13_GroupSizeMax = {
+    type = integer, min = 1, max = 25, default = 11,
+    page = Bandits_Clan_13, translation = Bandits.GroupSizeMax, _tooltip=Bandits.GroupSizeMaxTooltip,
+}
+option Bandits.Clan_13_Loadout = {
+    type = enum, numValues=6, default = 6,
+    page = Bandits_Clan_13, translation = Bandits.Loadout, _tooltip=Bandits.LoadoutTooltip, valueTranslation=Bandits.Loadout,
+}
+option Bandits.Clan_13_SpecialWeapons = {
+    type = enum, numValues=6, default = 2,
+    page = Bandits_Clan_13, translation = Bandits.SpecialWeapons, _tooltip=Bandits.SpecialWeaponsTooltip, valueTranslation=Bandits.SpecialWeapons,
+}
+
+/***** militia *****/
+
+option Bandits.Clan_14_RandomAmmo = {
+    type = integer, min = 0, max = 25, default = 1,
+    page = Bandits_Clan_14, translation = Bandits.RandomAmmo, _tooltip=Bandits.RandomAmmo_Tooltip,
+}
+option Bandits.Clan_14_RandomHealthMin = {
+    type = double, min = 1, max = 4, default = 1.2,
+    page = Bandits_Clan_14, translation = Bandits.RandomHealthMin, _tooltip=Bandits.RandomHealthMin_Tooltip,
+}
+option Bandits.Clan_14_RandomHealthMax = {
+    type = double, min = 1, max = 4, default = 2.5,
+    page = Bandits_Clan_14, translation = Bandits.RandomHealthMax, _tooltip=Bandits.RandomHealthMax_Tooltip,
+}
+option Bandits.Clan_14_GroupSizeMin = {
+    type = integer, min = 1, max = 25, default = 2,
+    page = Bandits_Clan_14, translation = Bandits.GroupSizeMin, _tooltip=Bandits.GroupSizeMinTooltip,
+}
+option Bandits.Clan_14_GroupSizeMax = {
+    type = integer, min = 1, max = 25, default = 11,
+    page = Bandits_Clan_14, translation = Bandits.GroupSizeMax, _tooltip=Bandits.GroupSizeMaxTooltip,
+}
+option Bandits.Clan_14_Loadout = {
+    type = enum, numValues=6, default = 5,
+    page = Bandits_Clan_14, translation = Bandits.Loadout, _tooltip=Bandits.LoadoutTooltip, valueTranslation=Bandits.Loadout,
+}
+option Bandits.Clan_14_SpecialWeapons = {
+    type = enum, numValues=6, default = 4,
+    page = Bandits_Clan_14, translation = Bandits.SpecialWeapons, _tooltip=Bandits.SpecialWeaponsTooltip, valueTranslation=Bandits.SpecialWeapons,
+}
+
+/***** legion *****/
+
+option Bandits.Clan_15_RandomAmmo = {
+    type = integer, min = 0, max = 25, default = 1,
+    page = Bandits_Clan_15, translation = Bandits.RandomAmmo, _tooltip=Bandits.RandomAmmo_Tooltip,
+}
+option Bandits.Clan_15_RandomHealthMin = {
+    type = double, min = 1, max = 4, default = 2,
+    page = Bandits_Clan_15, translation = Bandits.RandomHealthMin, _tooltip=Bandits.RandomHealthMin_Tooltip,
+}
+option Bandits.Clan_15_RandomHealthMax = {
+    type = double, min = 1, max = 4, default = 3,
+    page = Bandits_Clan_15, translation = Bandits.RandomHealthMax, _tooltip=Bandits.RandomHealthMax_Tooltip,
+}
+option Bandits.Clan_15_GroupSizeMin = {
+    type = integer, min = 1, max = 25, default = 3,
+    page = Bandits_Clan_15, translation = Bandits.GroupSizeMin, _tooltip=Bandits.GroupSizeMinTooltip,
+}
+option Bandits.Clan_15_GroupSizeMax = {
+    type = integer, min = 1, max = 25, default = 12,
+    page = Bandits_Clan_15, translation = Bandits.GroupSizeMax, _tooltip=Bandits.GroupSizeMaxTooltip,
+}
+option Bandits.Clan_15_Loadout = {
+    type = enum, numValues=6, default = 4,
+    page = Bandits_Clan_15, translation = Bandits.Loadout, _tooltip=Bandits.LoadoutTooltip, valueTranslation=Bandits.Loadout,
+}
+option Bandits.Clan_15_SpecialWeapons = {
+    type = enum, numValues=6, default = 4,
+    page = Bandits_Clan_15, translation = Bandits.SpecialWeapons, _tooltip=Bandits.SpecialWeaponsTooltip, valueTranslation=Bandits.SpecialWeapons,
+}
+
+/***** order *****/
+
+option Bandits.Clan_16_RandomAmmo = {
+    type = integer, min = 0, max = 25, default = 2,
+    page = Bandits_Clan_16, translation = Bandits.RandomAmmo, _tooltip=Bandits.RandomAmmo_Tooltip,
+}
+option Bandits.Clan_16_RandomHealthMin = {
+    type = double, min = 1, max = 4, default = 2,
+    page = Bandits_Clan_16, translation = Bandits.RandomHealthMin, _tooltip=Bandits.RandomHealthMin_Tooltip,
+}
+option Bandits.Clan_16_RandomHealthMax = {
+    type = double, min = 1, max = 4, default = 3.1,
+    page = Bandits_Clan_16, translation = Bandits.RandomHealthMax, _tooltip=Bandits.RandomHealthMax_Tooltip,
+}
+option Bandits.Clan_16_GroupSizeMin = {
+    type = integer, min = 1, max = 25, default = 4,
+    page = Bandits_Clan_16, translation = Bandits.GroupSizeMin, _tooltip=Bandits.GroupSizeMinTooltip,
+}
+option Bandits.Clan_16_GroupSizeMax = {
+    type = integer, min = 1, max = 25, default = 15,
+    page = Bandits_Clan_16, translation = Bandits.GroupSizeMax, _tooltip=Bandits.GroupSizeMaxTooltip,
+}
+option Bandits.Clan_16_Loadout = {
+    type = enum, numValues=6, default = 4,
+    page = Bandits_Clan_16, translation = Bandits.Loadout, _tooltip=Bandits.LoadoutTooltip, valueTranslation=Bandits.Loadout,
+}
+option Bandits.Clan_16_SpecialWeapons = {
+    type = enum, numValues=6, default = 4,
+    page = Bandits_Clan_16, translation = Bandits.SpecialWeapons, _tooltip=Bandits.SpecialWeaponsTooltip, valueTranslation=Bandits.SpecialWeapons,
+}
